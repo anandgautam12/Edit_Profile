@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit.in - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO / SHOWREEL -->
+  <section class="hero">
+    <video src="videos/showreel.mp4" autoplay muted loop></video>
+    <div class="overlay">
+      <h1>Edit_PORTFOLIO</h1>
+      <p><h2>Social Media Marketing & Video Editing Agency</p></h2>
+    </div>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filter-buttons">
+    <button class="active" onclick="filterVideos('all')">All</button>
+    <button onclick="filterVideos('short')">Short Form</button>
+    <button onclick="filterVideos('long')">Long Form</button>
+    <button onclick="filterVideos('gaming')">Gaming</button>
+    <button onclick="filterVideos('football')">Football</button>
+    <button onclick="filterVideos('ads')">Ads</button>
+    <button onclick="filterVideos('documentary')">Documentary</button>
+    <button onclick="filterVideos('anime')">Anime</button>
+    <button onclick="filterVideos('color')">Color Grading</button>
+  </div>
+
+  <!-- PORTFOLIO GRID -->
+  <div class="portfolio">
+    <div class="portfolio-item" data-category="short" data-description="Short form videos for Instagram Reels & YouTube Shorts.">
+      <div class="video-wrapper">
+        <video src="videos/short1.mp4" muted></video>
+        <div class="play-overlay">▶</div>
+      </div>
+      <h3>Short Form Video</h3>
+    </div>
+
+    <div class="portfolio-item" data-category="long" data-description="Full-length YouTube & cinematic edits.">
+      <div class="video-wrapper">
+        <video src="videos/long1.mp4" muted></video>
+        <div class="play-overlay">▶</div>
+      </div>
+      <h3>Long Form Video</h3>
+    </div>
+
+    <div class="portfolio-item" data-category="gaming" data-description="High-energy gaming montages & streams.">
+      <div class="video-wrapper">
+        <video src="videos/gaming1.mp4" muted></video>
+        <div class="play-overlay">▶</div>
+      </div>
+      <h3>Gaming Video</h3>
+    </div>
+
+    <div class="portfolio-item" data-category="football" data-description="Football highlight edits & montages.">
+      <div class="video-wrapper">
+        <video src="videos/football1.mp4" muted></video>
+        <div class="play-overlay">▶</div>
+      </div>
+      <h3>Football Edit</h3>
+    </div>
+
+    <div class="portfolio-item" data-category="ads" data-description="Creative ad campaigns for brands & eCommerce.">
+      <div class="video-wrapper">
+        <video src="videos/ads1.mp4" muted></video>
+        <div class="play-overlay">▶</div>
+      </div>
+      <h3>Ad Campaign</h3>
+    </div>
+
+    <div class="portfolio-item" data-category="documentary" data-description="Professional documentary-style storytelling.">
+      <div class="video-wrapper">
+        <video src="videos/doc1.mp4" muted></video>
+        <div class="play-overlay">▶</div>
+      </div>
+      <h3>Documentary Style</h3>
+    </div>
+
+    <div class="portfolio-item" data-category="anime" data-description="Stylized anime edits with effects & transitions.">
+      <div class="video-wrapper">
+        <video src="videos/anime1.mp4" muted></video>
+        <div class="play-overlay">▶</div>
+      </div>
+      <h3>Anime Edit</h3>
+    </div>
+
+    <div class="portfolio-item" data-category="color" data-description="Cinematic color grading for videos.">
+      <div class="video-wrapper">
+        <video src="videos/color1.mp4" muted></video>
+        <div class="play-overlay">▶</div>
+      </div>
+      <h3>Color Grading</h3>
+    </div>
+  </div>
+<section id="videos">
+  <h2>🎬 My Videos</h2>
+
+ 
+  <div class="video-box">
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/500YDHiosDI" 
+      title="YouTube video player" frameborder="0"
+      allowfullscreen></iframe>
+    <p>Video 1 - Introduction</p>
+  </div>
+
+  
+  <div class="video-box">
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+      title="YouTube video player" frameborder="0"
+      allowfullscreen></iframe>
+    <p>Video 2 - Tutorial</p>
+  </div>
+</section>
+  <script src="script.js"></script>
+</body>
+</html>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span onclick="closeLightbox()">&times;</span>
+    <video id="lightboxVideo" controls autoplay></video>
+    <p id="videoDescription"></p>
+  </div>
